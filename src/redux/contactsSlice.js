@@ -22,7 +22,7 @@ const contactsSlice = createSlice({
     },
     deleteContact(state, action) {
       const index = state.findIndex(contact => contact.id === action.payload);
-      state.splise(index, 1);
+      state.splice(index, 1);
     },
   },
 });

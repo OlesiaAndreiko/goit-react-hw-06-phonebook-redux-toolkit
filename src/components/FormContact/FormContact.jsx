@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/actions';
+import { addContact } from '../../redux/contactsSlice';
 import { getContacts } from '../../redux/selectors';
 import { Heading } from '../Heading/Hading';
 
