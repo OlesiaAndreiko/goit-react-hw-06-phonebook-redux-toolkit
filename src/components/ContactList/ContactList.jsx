@@ -1,4 +1,3 @@
-// import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getContacts, getFilter } from '../../redux/selectors';
 import { Contact } from '../Contact/Contact';
@@ -13,14 +12,9 @@ export const ContactList = () => {
     contact.name.toLowerCase().includes(searchField.search.toLowerCase())
   );
 
-  // useEffect(
-  //   () => localStorage.setItem('contacts', JSON.stringify(contacts)),
-  //   [contacts]
-  // );
-
   return (
     <>
-      <Heading title={'contacts'}/>
+      <Heading title={'contacts'} />
       {newContacts.length ? (
         <List>
           {newContacts.map(contact => (
