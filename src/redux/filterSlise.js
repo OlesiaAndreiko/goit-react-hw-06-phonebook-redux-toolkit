@@ -4,9 +4,12 @@ const filtersInitialState = '';
 
 const filterSlice = createSlice({
   name: 'filtres',
-  initialState: filtersInitialState,
+  initialState: {
+    search: filtersInitialState,
+  },
   reducers: {
-    searchContact: (_, action) => action.payload,
+    searchContact: (state, action) => {
+      state.search = action.payload},
   },
 });
 

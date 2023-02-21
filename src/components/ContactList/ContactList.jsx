@@ -7,10 +7,10 @@ import { List } from './ContactList.staled';
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
-  const search = useSelector(getFilter);
+  const searchField = useSelector(getFilter);
 
-  const newContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(search.toLowerCase())
+  const newContacts = contacts.items.filter(contact =>
+    contact.name.toLowerCase().includes(searchField.search.toLowerCase())
   );
 
   // useEffect(
